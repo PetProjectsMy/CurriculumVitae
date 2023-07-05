@@ -1,0 +1,166 @@
+:root {
+  --A4-width: 210mm;
+  --A4-height: 297mm;
+
+  --header-background-color: rgb(62, 68, 70);
+  --main-part-background-color: rgb(77, 84, 87);
+
+  --font-color: white;
+  --h1-font-size: 32px;
+  --h2-font-size: 28px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+html {
+  font-family: "Times New Roman", serif;
+
+  print-color-adjust: exact;
+}
+
+body {
+  box-sizing: border-box;
+  width: var(--A4-width);
+  height: var(--A4-height);
+  margin: 0;
+  padding: 0;
+
+  font-size: var(--font-size-medium);
+  color: var(--font-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+
+  width: var(--A4-width);
+  height: var(--A4-height);
+
+  page-break-after: always;
+}
+
+.cv-header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+
+  width: 100%;
+
+  background-color: var(--header-background-color);
+  border-bottom: 2px solid red;
+}
+
+.cv-header > * {
+  margin-top: 3mm;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 34%;
+}
+
+.info-section__header-wrapper,
+.contacts-section__header-wrapper {
+  display: flex;
+  align-items: center;
+  height: 1.2cm;
+}
+
+.info-section__info-list {
+  padding: 0;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 33%;
+  padding-left: 0;
+
+  font-size: 20px;
+}
+
+.contacts-section__contacts-list {
+  padding-left: 0;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.contacts-section__contact {
+  margin-bottom: 2mm;
+  overflow-wrap: break-word;
+}
+
+.contacts-section__contact::before {
+  content: "";
+  margin-left: -10px;
+}
+
+.contacts-section__header-wrapper {
+  width: 100%;
+}
+
+.contacts-section__header {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1cm;
+}
+
+.contacts-section__contact-info {
+  font-size: 20px;
+  text-align: center;
+}
+
+.photo-section {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  margin-top: 5mm;
+}
+
+#photo {
+  width: 5cm;
+  height: auto;
+}
+
+.main {
+  flex: 3;
+  padding: 0 5mm;
+  font-size: 20px;
+  background-color: var(--main-part-background-color);
+}
+
+.strong {
+  font-size: 24px;
+}
+
+.learning-experience {
+  list-style-type: none;
+}
+
+.learning-experience__title {
+  margin: 0;
+}
