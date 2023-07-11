@@ -14,10 +14,20 @@
     <span class="learning-project__functionality-description">
       <strong>Функциональность:</strong>
       {{ functionality | join(", ") }}
-      <br>
     </span>
+    <br>
     <span class="learning-project__technologies-description">
-      <strong>Технологии:</strong> {{ technologies | join(", ") }}
+      <strong>Технологии:</strong>
+      {% for technology in technologies %}
+        {% if technology == "\n" %}
+          <br>
+          <em>&emsp;</em>
+        {% elif not loop.last %}
+          {{ technology }},&nbsp
+        {% else %}
+          {{ technology }}
+        {% endif %}
+      {% endfor %}
     </span>
     <br>
     <span class="learning-project__github-link">
@@ -38,8 +48,8 @@
         title_info="командная разработка",
         functionality=["oauth", "мультиплеер", "профиль", "рейтинги", "миниигры"],
         technologies=[
-        "Vite", "SSR", "React", "Redux","Postcss",
-        "Docker", "Express", "Nginx", "Service Worker"
+        "\n", "Vite", "SSR", "React", "Redux","Postcss", "Service Worker",
+        "\n", "Express", "Docker", "Postgres", "Nginx"
         ],
         github="https://github.com/PetProjectsMy/among-us-game") 
     }}

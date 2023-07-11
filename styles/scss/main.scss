@@ -1,6 +1,15 @@
+.main {
+  flex: 3;
+  padding: 0 5mm;
+  font-size: 20px;
+  background-color: var(--main-part-background-color);
+}
+
 .technologies-stack-section,
 .learning-experience-section,
-.work-experience-section {
+.work-experience-section,
+.education-section,
+.about-me-section {
   margin-top: 5mm;
 }
 
@@ -14,12 +23,21 @@
   margin-block-end: 0;
 }
 
+.learning-experience {
+  list-style-type: none;
+}
+
 .technologies-stack-section__technologies-enumeration,
 .learning-project,
-.work-place {
+.works-list,
+.education-places-list {
   margin-left: 5mm;
 }
 
 .learning-project {
   margin-bottom: 2mm;
+}
+
+.about-me-description {
+  margin: 0 5mm;
 }

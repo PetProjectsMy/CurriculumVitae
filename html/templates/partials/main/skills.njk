@@ -1,4 +1,4 @@
-<main class="main">
+{% block technical_skills %}
   <section class="technologies-stack-section">
     <h3 class="technologies-stack-section__title">Навыки</h3>
     <ul class="technologies-stack-section__technologies-list">
@@ -13,6 +13,4 @@
       </li>
     </ul>
   </section>
-  {% include "partials/main/learning.njk" %}
-  {% include "partials/main/works.njk" %}
-</main>
+{% endblock %}
