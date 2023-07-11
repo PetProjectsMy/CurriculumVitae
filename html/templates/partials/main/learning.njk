@@ -1,0 +1,47 @@
+{% macro pet_project(
+  title="",
+  title_info="",
+  functionality="",
+  technologies="",
+  github="") %}
+  <li class="learning-project">
+    <h4 class="learning-project__title">
+      <em>{{ title }}</em>
+      {% if title_info %}
+        <span class="font-usual">&nbsp({{ title_info }})</span>
+      {% endif %}
+    </h4>
+    <span class="learning-project__functionality-description">
+      <strong>Функциональность:</strong>
+      {{ functionality | join(", ") }}
+      <br>
+    </span>
+    <span class="learning-project__technologies-description">
+      <strong>Технологии:</strong> {{ technologies | join(", ") }}
+    </span>
+    <br>
+    <span class="learning-project__github-link">
+      <strong>GitHub:</strong><a href={{ github }}> {{ github }}</a>
+    </span>
+  </li>
+{% endmacro %}
+
+<section class="learning-experience-section">
+  <h3 class="learning-experience-section__title">Учебный опыт</h3>
+  <ul class="learning-projects-list">
+    {{ pet_project(title="Мессенджер",
+        functionality=["чаты", "профиль", "single page application"],
+        technologies=["Webpack", "Typescript", "WebSocket", "Handlebars", "Less"],
+        github="https://github.com/PetProjectsMy/Messenger") 
+    }}
+    {{ pet_project(title='Игра "Among Us"',
+        title_info="командная разработка",
+        functionality=["oauth", "мультиплеер", "профиль", "рейтинги", "миниигры"],
+        technologies=[
+        "Vite", "SSR", "React", "Redux","Postcss",
+        "Docker", "Express", "Nginx", "Service Worker"
+        ],
+        github="https://github.com/PetProjectsMy/among-us-game") 
+    }}
+  </ul>
+</section>

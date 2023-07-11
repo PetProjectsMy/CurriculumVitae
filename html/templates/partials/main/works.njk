@@ -1,0 +1,18 @@
+{% macro work_place(
+  organization="",
+  post="",
+  date=""
+  ) %}
+  <li class="work-place">
+    <h4 class="work-place__date">
+      <em>{{ date }}</em>
+    </h4>
+  </li>
+{% endmacro %}
+
+<section class="work-experience-section">
+  <h3 class="work-experience-section__title">Опыт работы</h3>
+  <ul class="works-list">
+    {{ work_place(date="2022 (8мес)") }}
+  </ul>
+</section>

@@ -1,9 +1,25 @@
 .technologies-stack-section,
+.learning-experience-section,
 .work-experience-section {
   margin-top: 5mm;
 }
 
+.learning-experience-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-experience-section__title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .technologies-stack-section__technologies-enumeration,
-.learning-experience-list__point {
+.learning-project,
+.work-place {
   margin-left: 5mm;
+}
+
+.learning-project {
+  margin-bottom: 2mm;
 }

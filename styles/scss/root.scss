@@ -1,18 +1,32 @@
+@use "sass:color";
+
 :root {
   --A4-width: 210mm;
   --A4-height: 297mm;
   --header-background-color: rgb(62, 68, 70);
   --main-part-background-color: rgb(77, 84, 87);
 
-  --font-color: white;
+  --font-color: #ffffff;
+  --links-color: rgb(243, 223, 223);
 
+  --font-size-normal: 20px;
   --h1-font-size: 32px;
   --h2-font-size: 28px;
 }
 
+$font-color: white;
+
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  color: var(--links-color);
+
+  &:visited {
+    color: var(--links-color);
+  }
 }
 
 ul {
@@ -29,8 +43,27 @@ h2 {
 
 html {
   font-family: "Times New Roman", serif;
+  font-size: var(--font-size-normal);
 
   print-color-adjust: exact;
+}
+
+strong {
+  color: color.adjust($color: $font-color, $lightness: -15%);
+}
+
+em {
+  font-style: normal;
+  color: color.adjust(
+    $red: 20,
+    $color: color.adjust($color: $font-color, $lightness: -25%)
+  );
+}
+
+.font-usual {
+  font-size: var(--font-size-normal);
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
