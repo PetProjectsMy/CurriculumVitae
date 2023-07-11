@@ -1,4 +1,11 @@
 {
   "cSpell.words": ["Arturi", "stylelint"],
-  "stylelint.configFile": ".stylelintrc.json"
+  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.validate": ["css", "scss"],
+  "[html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "djlint.useVenv": false,
+  "djlint.pythonPath": "/home/artur/.local/pipx/venvs/djlint/bin/python",
+  "djlint.configuration": ".djlintrc.json"
 }

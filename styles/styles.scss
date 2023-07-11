@@ -1,0 +1,33 @@
+@import "scss/root";
+@import "scss/mixins";
+@import "scss/header";
+@import "scss/main";
+
+.page {
+  display: flex;
+  flex-direction: column;
+
+  width: var(--A4-width);
+  height: var(--A4-height);
+
+  page-break-after: always;
+}
+
+.main {
+  flex: 3;
+  padding: 0 5mm;
+  font-size: 20px;
+  background-color: var(--main-part-background-color);
+}
+
+.strong {
+  font-size: 24px;
+}
+
+.learning-experience {
+  list-style-type: none;
+}
+
+.learning-experience__title {
+  margin: 0;
+}
