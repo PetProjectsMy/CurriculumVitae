@@ -1,11 +1,13 @@
-<div class="page">
+{% extends "layouts/page.njk" %}
 
-  {% block about-me %}
+{% block page_content %}
+
+  {% block about_me %}
     {% include "partials/about-me.njk" %}
-  {% endblock about-me %}
+  {% endblock about_me %}
 
   {% block education %}
     {% include "partials/education.njk" %}
   {% endblock education %}
 
-</div>
+{% endblock page_content %}

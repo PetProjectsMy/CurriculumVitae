@@ -5,7 +5,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  padding: 0 5mm;
+  padding: 0 var(--page-content-padding) 7mm;
 }
 
 .first-page-main > *[class$="section"] {

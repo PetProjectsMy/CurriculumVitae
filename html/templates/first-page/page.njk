@@ -1,4 +1,6 @@
-<div class="page">
+{% extends "layouts/page.njk" %}
+
+{% block page_content %}
 
   {% block header %}
     {% include "partials/header.njk" %}
@@ -8,4 +10,4 @@
     {% include "first-page/main.njk" %}
   {% endblock main %}
 
-</div>
+{% endblock page_content %}

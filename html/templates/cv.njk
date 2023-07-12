@@ -1,9 +1,10 @@
-{% extends "layout.njk" %}
+{% extends "layouts/cv.njk" %}
 
 {% block first_page %}
+  {% set first_page = true %}
   {% include "first-page/page.njk" %}
 {% endblock first_page %}
 
-{# {% block second_page %}
+{% block second_page %}
   {% include "second-page/page.njk" %}
-{% endblock second_page %} #}
+{% endblock second_page %}

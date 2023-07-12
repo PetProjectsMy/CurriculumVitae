@@ -1,8 +1,10 @@
+{% import "macros/macros.njk" as macros %}
+
 {% macro work_place(
   organization="",
   post="",
   date="",
-  description=""
+  description=[]
   ) %}
   <li class="work-place">
     <span class="work-place__date">
@@ -13,7 +15,9 @@
       Место работы: {{ post }}, {{ organization }}
     </span>
     <br>
-    <span class="work-place__description">Обязанности: {{ description }}</span>
+    <span class="work-place__description">
+      {{ macros.multiline(lines=description) }}
+    </span>
     <br>
   </li>
 {% endmacro %}
@@ -24,6 +28,8 @@
     {{ work_place(date="2022 (стажировка)",
         post="QA/тестировщик",
         organization="МониторСофт",
-        description="Занимался UI-тестированием с использованием selenium") }}
+        description=[
+        "В мои обязанности входило автоматическое тестирование веб-сервиса для документооборота с применением selenium и pytest.",
+        "\n", "Занимаясь преимущественно UI-тестированием, научился ценить понятный и удобный интерфейс "]) }}
   </ul>
 </section>

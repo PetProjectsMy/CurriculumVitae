@@ -1,28 +1,8 @@
 @import "variables";
-@import "mixins";
 
 * {
   margin: 0;
   padding: 0;
-}
-
-.page {
-  @include flex-column-container;
-
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-
-  width: var(--A4-width);
-  height: var(--A4-height);
-
-  background-color: var(--page-background-color);
-
-  page-break-after: always;
-}
-
-.page-break {
-  page-break-after: always;
 }
 
 a {
@@ -70,11 +50,20 @@ em {
 
 body {
   box-sizing: border-box;
-  width: var(--A4-width);
-  height: var(--A4-height);
   margin: 0;
   padding: 0;
 
   font-size: var(--font-size-medium);
   color: var(--font-color--main);
 }
+
+// without this Firefox has a thin line on left ot right side
+// Can be checked by setting body backgound-color
+@page {
+  size: A4;
+}
+// @media print {
+//   body {
+//     background-color: red;
+//   }
+// }

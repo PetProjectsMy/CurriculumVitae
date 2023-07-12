@@ -1,0 +1,29 @@
+.page {
+  width: var(--A4-width);
+  height: var(--A4-height);
+  margin: 0 auto;
+
+  background-color: var(--page-background-color);
+
+  page-break-after: always;
+
+  @media screen {
+    border-bottom: 1px dashed red;
+  }
+}
+
+.page-content-wrapper {
+  @include flex-column-container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+
+  &:not(.first-page) {
+    padding: var(--page-content-padding);
+  }
+}
