@@ -1,0 +1,13 @@
+{% macro multiline(lines=[], line_tab="&emsp;", lines_sep="") %}
+  {% for line in lines %}
+    {% if line == "\n" %}
+      <br>
+    {% elif line == "\t" %}
+      {{ line_tab | safe }}
+    {% elif not loop.last %}
+      {{ line }}{{ lines_sep }}
+    {% else %}
+      {{ line }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}

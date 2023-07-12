@@ -1,4 +1,5 @@
-@use "sass:color";
+@import "variables";
+@import "mixins";
 
 * {
   margin: 0;
@@ -6,21 +7,27 @@
 }
 
 .page {
+  @include flex-column-container;
+
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 
-  display: flex;
-  flex-direction: column;
-
   width: var(--A4-width);
   height: var(--A4-height);
 
+  background-color: var(--page-background-color);
+
+  page-break-after: always;
+}
+
+.page-break {
   page-break-after: always;
 }
 
 a {
   color: var(--links-color);
+  text-decoration-line: none;
 
   &:visited {
     color: var(--links-color);
@@ -43,20 +50,16 @@ html {
   font-family: "Times New Roman", serif;
   font-size: var(--font-size-normal);
 
-  background-color: rgb(96, 93, 93);
   print-color-adjust: exact;
 }
 
 strong {
-  color: color.adjust($color: $font-color, $lightness: -15%);
+  color: $font-color-strong;
 }
 
 em {
   font-style: normal;
-  color: color.adjust(
-    $red: 20,
-    $color: color.adjust($color: $font-color, $lightness: -25%)
-  );
+  color: $font-color-emphasized;
 }
 
 .font-usual {
@@ -73,5 +76,5 @@ body {
   padding: 0;
 
   font-size: var(--font-size-medium);
-  color: var(--font-color);
+  color: var(--font-color--main);
 }

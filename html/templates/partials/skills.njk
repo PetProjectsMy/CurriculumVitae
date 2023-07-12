@@ -1,0 +1,25 @@
+{% macro skills_enumeration(title, skills) %}
+  <li class="technologies-stack-section__technologies-enumeration">
+    <span><em>{{ title }}:</em> {{ skills | join(", ") }}</span>
+  </li>
+{% endmacro %}
+
+{% block technical_skills %}
+  <section class="technologies-stack-section">
+    <h3 class="technologies-stack-section__title">Навыки</h3>
+    <ul class="technologies-stack-section__technologies-list">
+      {{ skills_enumeration(title="Языки",
+            skills=["Javascript", "Typescript"]) }}
+      {{ skills_enumeration(title="Фреймворки/библиотеки",
+            skills=["React", "Redux", "Redux Toolkit", "RTK Query"]) }}
+      {{ skills_enumeration(title="Верстка",
+            skills=["HTML5", "CSS3", "Scss", "Less", "Postcss", "Handlebars", "Nunjucks"]) }}
+      {{ skills_enumeration(title="Сборщики",
+            skills=["Webpack", "Vite", "Gulp"]) }}
+      {{ skills_enumeration(title="Сервер",
+            skills=["Docker", "Nginx", "Express", "PostgreSQL", "Sequelize"]) }}
+      {{ skills_enumeration(title=" Code Linters",
+            skills=["Eslint", "Stylelint", "CSpell", "Lefthook"]) }}
+    </ul>
+  </section>
+{% endblock %}

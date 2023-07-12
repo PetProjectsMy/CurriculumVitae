@@ -3,7 +3,7 @@
   organization="",
   specialization=""
   ) %}
-  <li class="work-place">
+  <li class="education-place">
     <span><em>{{ date }}:</em> {{ organization }}</span>
     <br>
     <span>Профиль: {{ specialization }}</span>
@@ -14,6 +14,9 @@
   <section class="education-section">
     <h3>Образование</h3>
     <ul class="education-places-list">
+      {{ education_place(date="2023",
+            organization="Яндекс Практикум",
+            specialization="Frontend Developer") }}
       {{ education_place(date="2017-2022",
             organization="Московский Физико-Технический Институт",
             specialization="компьютерное моделирование") }}

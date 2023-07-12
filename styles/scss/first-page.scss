@@ -1,16 +1,15 @@
-.main {
+.first-page-main {
+  display: flex;
   flex: 3;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
   padding: 0 5mm;
-  font-size: 20px;
-  background-color: var(--main-part-background-color);
 }
 
-.technologies-stack-section,
-.learning-experience-section,
-.work-experience-section,
-.education-section,
-.about-me-section {
-  margin-top: 5mm;
+.first-page-main > *[class$="section"] {
+  margin-bottom: auto;
 }
 
 .learning-experience-section {
@@ -23,8 +22,9 @@
   margin-block-end: 0;
 }
 
-.learning-experience {
-  list-style-type: none;
+.learning-projects-list,
+.education-places-list {
+  list-style-type: disc;
 }
 
 .technologies-stack-section__technologies-enumeration,
@@ -36,6 +36,10 @@
 
 .learning-project {
   margin-bottom: 2mm;
+}
+
+.education-place {
+  margin-bottom: 3mm;
 }
 
 .about-me-description {
