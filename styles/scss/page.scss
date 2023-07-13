@@ -21,9 +21,14 @@
   justify-content: flex-start;
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 
-  &:not(.first-page) {
+  &:not([id="page-1"]) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
     padding: var(--page-content-padding);
   }
 }

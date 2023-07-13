@@ -1,3 +1,7 @@
-.second-page {
-  padding: var(--page-content-padding);
+#page-2 {
+  align-items: flex-start;
+
+  & > *[class$="-section"] {
+    margin-bottom: 5mm;
+  }
 }

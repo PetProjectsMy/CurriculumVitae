@@ -1,6 +1,7 @@
 <div class="page">
 
-  <div class="page-content-wrapper{{ " first-page" if first_page}}">
+  <div class="page-content-wrapper"
+       id="page-{{ page_number }}">
     {% block page_content %}
     {% endblock page_content %}
   </div>

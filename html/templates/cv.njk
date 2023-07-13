@@ -1,10 +1,11 @@
 {% extends "layouts/cv.njk" %}
 
 {% block first_page %}
-  {% set first_page = true %}
+  {% set page_number = 1 %}
   {% include "first-page/page.njk" %}
 {% endblock first_page %}
 
 {% block second_page %}
+  {% set page_number = 2 %}
   {% include "second-page/page.njk" %}
 {% endblock second_page %}
