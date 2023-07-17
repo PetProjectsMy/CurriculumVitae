@@ -15,6 +15,7 @@
 .learning-experience-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3mm;
 }
 
 .learning-experience-section__title {
@@ -22,15 +23,19 @@
   margin-block-end: 0;
 }
 
-.learning-projects-list,
-.education-places-list {
+.learning-projects-list {
   list-style-type: disc;
+
+  li::marker {
+    color: var(--font-color-emphasized);
+  }
 }
 
 .technologies-stack-section__technologies-enumeration,
 .learning-project,
-.works-list,
-.education-places-list {
+.education-places-list,
+.work-experience-section,
+.learning-experience-section {
   margin-left: 5mm;
 }
 

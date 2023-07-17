@@ -35,12 +35,12 @@ html {
 }
 
 strong {
-  color: $font-color-strong;
+  color: var(--font-color-strong);
 }
 
 em {
   font-style: normal;
-  color: $font-color-emphasized;
+  color: var(--font-color-emphasized);
 }
 
 .font-usual {

@@ -6,9 +6,8 @@
   technologies="",
   github="") %}
   <li class="learning-project">
-    <h4 class="learning-project__title">
-      <strong>{{ title }}</strong>
-    </h4>
+    <span><em class="learning-project__title">{{ title }}</em></span>
+    <br>
     <span class="learning-project__functionality-description">
       <em>Описание:</em>
       {{ macros.multiline(lines=description) }}
@@ -20,13 +19,17 @@
     </span>
     <br>
     <span class="learning-project__github-link">
-      <em>GitHub:</em><a href={{ github }}> {{ github }}</a>
+      <em>GitHub:</em><a href={{ github }}> <em>{{ github }}</em></a>
     </span>
   </li>
 {% endmacro %}
 
 <section class="learning-experience-section">
-  <h3 class="learning-experience-section__title">Учебный опыт</h3>
+  <h4 class="learning-experience-section__title">
+    <em>01/2023 - Н.В.</em>
+  </h4>
+  <span>Место работы: Яндекс Практикум(обучение), Frontend Developer</span>
+  <span>Проекты:</span>
   <ul class="learning-projects-list">
     {{ pet_project(title="Мессенджер",
         description=["Веб-мессенджер в виде single page application.",

@@ -7,12 +7,11 @@
   description=[]
   ) %}
   <li class="work-place">
-    <span class="work-place__date">
+    <h4>
       <em>{{ date }}</em>
-    </span>
-    <br>
+    </h4>
     <span class="work-place__post">
-      Место работы: {{ post }}, {{ organization }}
+      Место работы: {{ organization }}, {{ post }}
     </span>
     <br>
     <span class="work-place__description">
@@ -23,9 +22,8 @@
 {% endmacro %}
 
 <section class="work-experience-section">
-  <h3 class="work-experience-section__title">Опыт работы</h3>
   <ul class="works-list">
-    {{ work_place(date="2022 (стажировка)",
+    {{ work_place(date="01/2022-09/2022",
         post="QA/тестировщик",
         organization="МониторСофт",
         description=[

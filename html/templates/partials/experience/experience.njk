@@ -1,0 +1,13 @@
+{% block experience %}
+  <section class="experience-section">
+    <h3>Опыт работы</h3>
+
+    {% block learning_experience %}
+      {% include "partials/experience/learning.njk" %}
+    {% endblock learning_experience %}
+
+    {% block work_experience %}
+      {% include "partials/experience/works.njk" %}
+    {% endblock work_experience %}
+  </section>
+{% endblock experience %}
