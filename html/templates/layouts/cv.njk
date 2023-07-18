@@ -12,12 +12,14 @@
           media="print" />
   </head>
   <body>
+    <div class="cv-content-wrapper  {{"theme-dark" if theme == "dark" else "theme-light"}}">
 
-    {% block first_page %}
-    {% endblock first_page %}
+      {% block first_page %}
+      {% endblock first_page %}
 
-    {% block second_page %}
-    {% endblock second_page %}
+      {% block second_page %}
+      {% endblock second_page %}
 
+    </div>
   </body>
 </html>
