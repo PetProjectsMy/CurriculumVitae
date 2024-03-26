@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>CV</title>
     <meta charset="utf-8" />
+    <meta name="keywords" content="Web-Developer, Resume, CV">
+    <meta name="description" content="My Web-Develeoper Resume">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link href="./styles.css"
@@ -12,7 +15,7 @@
           media="print" />
   </head>
   <body>
-    <div class="cv-content-wrapper  {{"theme-dark" if theme == "dark" else "theme-light"}}">
+    <div class="cv-content-wrapper  {{ "theme-dark" if theme == "dark" else "theme-light" }}">
 
       {% block first_page %}
       {% endblock first_page %}

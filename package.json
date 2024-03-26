@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp --gulpfile=gulpfile.mjs"
+    "gulp": "gulp --gulpfile=gulpfile.mjs",
+    "lint:styles": "stylelint './**/*.scss'",
+    "lint:templates": "djlint --configuration .djlintrc.json html/**"
   },
   "keywords": [],
   "author": "",
