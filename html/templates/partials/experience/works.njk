@@ -1,4 +1,4 @@
-{% import "macros/macros.njk" as macros %}
+{% import "macros/text-helpers.njk" as text_helpers %}
 
 {% macro work_place(
   organization="",
@@ -7,27 +7,31 @@
   description=[]
   ) %}
   <li class="work-place">
-    <h4>
-      <em>{{ date }}</em>
-    </h4>
+    <h4><em>{{ date }}</em></h4>
     <span class="work-place__post">
       Место работы: {{ organization }}, {{ post }}
     </span>
     <br>
     <span class="work-place__description">
-      {{ macros.multiline(lines=description) }}
+      {{ text_helpers.multiline(lines=description) }}
     </span>
     <br>
   </li>
 {% endmacro %}
 
-<section class="work-experience-section">
-  <ul class="works-list">
-    {{ work_place(date="01/2022-09/2022",
+<section class="experience-section">
+  <h3 class="experience-section__header">Опыт работы</h3>
+  <div class="experience-section__main">
+    <ul class="work-places-list">
+      {{ work_place(
+        date="01/2022-09/2022",
         post="QA/тестировщик",
         organization="МониторСофт",
         description=[
-        "В мои обязанности входило автоматическое тестирование веб-сервиса для документооборота с применением selenium и pytest.",
-        "\n", "Занимаясь преимущественно UI-тестированием, научился ценить понятный и удобный интерфейс "]) }}
-  </ul>
+          "В мои обязанности входило написание E2E тестов для веб-сервиса с применением selenium и pytest."
+        ]) 
+      }}
+    </ul>
+  </div>
+
 </section>

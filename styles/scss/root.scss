@@ -49,8 +49,8 @@ em {
   background-color: var(--viewport-background-color);
 }
 
-// without this Firefox has a thin line on left ot right side
-// Can be checked by setting body backgound-color
+// without this printing in Firefox as A4 has a thin lines on edges
+// Can be checked by setting body background-color as commented below
 @page {
   size: A4;
 }

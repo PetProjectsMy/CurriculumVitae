@@ -1,0 +1,25 @@
+{% macro multiline(
+  lines=[],
+  line_prefixes=[],
+  line_tab="&emsp;")
+%}
+  {% set lines_decorated = [] %}
+
+  {% for line in lines %}
+    {% set lines_decorated = lines_decorated.concat(line_prefixes) %}
+    {% set _ = lines_decorated.push(line) %}
+    {% if not loop.last and line not in ["\n", "\t"] %}
+      {% set _ = lines_decorated.push("\n") %}
+    {% endif %}
+  {% endfor %}
+
+  {% for line in lines_decorated %}
+    {% if line == "\n" %}
+      <br>
+    {% elif line == "\t" %}
+      {{ line_tab | safe }}
+    {% else %}
+      {{ line }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
