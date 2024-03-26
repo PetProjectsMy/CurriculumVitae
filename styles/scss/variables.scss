@@ -1,22 +1,29 @@
 :root {
   --A4-width: 210mm;
   --A4-height: 297mm;
-  // --header-background-color: rgb(62, 68, 70);
-  // --page-background-color: rgb(77, 84, 87);
-  --header-background-color: white;
-  --page-background-color: white;
 
-  // --font-color--main: #ffffff;
-  --font-color-main: black;
-  // --font-color-emphasized: rgb(255, 236, 236);
-  --font-color-emphasized: rgb(133, 120, 120);
-  --font-color-strong: var(--font-color-emphasized)
+  --font-color-strong: var(--font-color-emphasized);
   --links-color: var(--font-color--main);
-
 
   --page-content-padding: 5mm;
 
   --font-size-normal: 20px;
   --h1-font-size: 32px;
   --h2-font-size: 28px;
+}
+
+[theme-dark] {
+  --header-background-color: rgb(62, 68, 70);
+  --page-background-color: rgb(77, 84, 87);
+
+  --font-color--main: #ffffff;
+  --font-color-emphasized: rgb(255, 236, 236);
+}
+
+[theme-light] {
+  --header-background-color: white;
+  --page-background-color: white;
+
+  --font-color-main: black;
+  --font-color-emphasized: rgb(133, 120, 120);
 }
