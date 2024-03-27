@@ -1,0 +1,18 @@
+{% macro education_place(
+  date="",
+  organization="",
+  specialization="")
+%}
+  {% if language == language_ru %}
+    {% set specialization_label = "Профиль" %}
+  {% elif language == language_en %}
+    {% set specialization_label = "Specialization" %}
+  {% endif %}
+
+  <li class="education-place">
+    <span><em>{{ date }}:</em> {{ organization }}</span>
+    <br>
+    <span>{{ specialization_label }}: {{ specialization }}</span>
+  </li>
+{% endmacro %}
+

@@ -1,0 +1,38 @@
+{% from "./pet-project.macro.njk" import pet_project with context %}
+
+{% block pet_projects_ru %}
+  <section class="experience-section">
+    <h3 class="experience-section__header">Пет-проекты:</h3>
+    <ul class="pet-projects-list">
+      {{ pet_project(
+        title="Мессенджер",
+        description="Веб-мессенджер в виде single page application",
+        features=[
+          "Реализованы чаты в реальном времени, регистрация, профиль пользователя",
+          "Интерфейс написан с помощью собственного компонента на основе JS Proxy",
+          "Из библиотек используется только html-шаблонизатор"
+        ],
+        technologies=["Webpack, Typescript, WebSocket, Handlebars, Less"],
+        github="https://github.com/PetProjectsMy/Messenger") 
+      }}
+      {{ pet_project(
+        title='Игра "Among Us"',
+        description="Проект командной разработки в рамках курса",
+        features=[
+          "мультиплеер, таблица рейтингов",
+          "oauth, регистрация и профиль пользователя"
+        ],
+        implemented_by_me=[
+          "реализованы часть интерфейсов и API",
+          "\t", "service worker на typescript, nginx и ssl для хостинга"
+        ],
+        technologies=[
+          "Lerna, Vite, SSR, React, Redux, RTK Query,",
+          "Canvas, Postcss, Service Worker,",
+          "Express, socket.io, Docker, Sequelize, Postgres, Nginx"
+        ],
+        github="https://github.com/Reactivnye-Enoty-Na-Lyzhan/among-us") 
+      }}
+    </ul>
+  </section>
+{% endblock pet_projects_ru %}

@@ -1,0 +1,34 @@
+{% from "macros/text-helpers.njk" import multiline with context %}
+
+{% macro workplace(
+  organization="",
+  post="",
+  date="",
+  description=[])
+%}
+  {% if language == language_ru %}
+    {% set organization_label = "Место работы" %}
+    {% set post_label = "Должность" %}
+  {% elif language == language_en %}
+    {% set organization_label = "Workplace" %}
+    {% set post_label = "Post" %}
+  {% endif %}
+
+  <li class="work-place">
+    <h4><em>{{ date }}</em></h4>
+    <span class="workplace__organization">
+      {{ organization_label }}: {{ organization }}
+    </span>
+    <br>
+
+    <span class="workplace__post">
+      {{ post_label }}: {{ post }}
+    </span>
+    <br>
+
+    <span class="workplace__description">
+      {{ multiline(lines=description) }}
+    </span>
+    <br>
+  </li>
+{% endmacro %}

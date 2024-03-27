@@ -1,0 +1,17 @@
+{% extends "layouts/page.njk" %}
+
+{% block page_content %}
+
+  {% block header %}
+    {% include "partials/header/_header.njk" %}
+  {% endblock header %}
+
+  {% block main %}
+    <div class="first-page-main">
+      {% include "partials/skills/_skills.njk" %}
+      {% include "partials/work-experience/_work-experience.njk" %}
+      {% include "partials/pet-projects/_pet-projects.njk" %}
+    </div>
+  {% endblock main %}
+
+{% endblock page_content %}

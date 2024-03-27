@@ -1,0 +1,58 @@
+{% macro header(
+  name = "",
+  country = "")
+%}
+  {% if language == language_ru %}
+    {% set country_label = "Страна" %}
+    {% set contacts_label = "Контакты" %}
+  {% elif language == language_en %}
+    {% set country_label = "Country" %}
+    {% set contacts_label = "Contacts" %}
+  {% endif %}
+
+  <header class="cv-header">
+    <section class="photo-section">
+      <img 
+        src="./assets/photo.jpg"
+        id="photo"
+        alt="photo"
+        width="188px"
+        height="227px"
+      />
+    </section>
+    <section class="info-section">
+      <div class="info-section__header-wrapper">
+        <h1 class="info-section__header">{{ name }}</h1>
+      </div>
+      <ul class="info-section__info-list">
+        <li class="info-section__info-point">Web Developer</li>
+        <li class="info-section__info-point">
+          <span>{{ country_label }}: {{ country }}</span>
+        </li>
+      </ul>
+    </section>
+    <section class="contacts-section">
+      <div class="contacts-section__header-wrapper">
+        <h2 class="contacts-section__header">{{ contacts_label }}</h2>
+      </div>
+      <ul class="contacts-section__contacts-list">
+        <li class="contacts-section__contact">
+          <span class="contacts-section__contact-info-header">Email:</span>
+          <span class="contacts-section__contact-info">arturisaev.me@gmail.com</span>
+        </li>
+        <li class="contacts-section__contact">
+          <span class="contacts-section__contact-info-header">Telegram:</span>
+          <span class="contacts-section__contact-info">@Arturi_Is</span>
+        </li>
+        <li class="contacts-section__contact">
+          <span class="contacts-section__contact-info-header">GitHub:</span>
+          <span class="contacts-section__contact-info">
+            <a href="https://github.com/Issayev">
+              <em>github.com/Issayev</em>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </section>
+  </header>
+{% endmacro %}

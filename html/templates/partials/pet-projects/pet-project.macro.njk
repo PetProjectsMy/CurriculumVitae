@@ -1,0 +1,50 @@
+{% from "macros/text-helpers.njk" import multiline with context %}
+
+{% macro pet_project(
+  title="",
+  description="",
+  features=[],
+  implemented_by_me=[],
+  technologies="",
+  github="") 
+%}
+  {% if language == language_ru %}
+    {% set description_label = "Описание" %}
+    {% set implemented_by_me_label = "С моей стороны" %}
+    {% set technologies_label = "Технологии" %}
+  {% elif language == language_en %}
+    {% set description_label = "Description" %}
+    {% set implemented_by_me_label = "Personal contribution" %}
+    {% set technologies_label = "Technologies" %}
+  {% endif %}
+
+  <li class="pet-project">
+    <span><em class="pet-project__title">{{ title }}</em></span>
+    <br>
+    <span class="pet-project__functionality-description">
+      <em>{{ description_label }}: </em>{{ description }}
+      <br>
+      {{ multiline(lines=features, line_prefixes=[["\t", "-"]]) }}
+    </span>
+    <br>
+
+    {% if implemented_by_me.length > 0 %}
+      <span class="pet-project__implemented-by-me">
+        <em>{{ implemented_by_me_label }}:</em>
+        {{ multiline(lines=implemented_by_me) }}
+      </span>
+      <br>
+    {% endif %}
+
+    <span class="pet-project__technologies-description">
+      <em>{{ technologies_label }}:</em>
+      {% set prefixes = [["\n", "\t", "-"], ["\t", "-"]] if (technologies | length > 1) else [] %}
+      {{ multiline(lines=technologies, line_prefixes=prefixes) }}
+    </span>
+    <br>
+
+    <span class="pet-project__github-link">
+      <em>GitHub:</em><a href={{ github }}> <em>{{ github }}</em></a>
+    </span>work-experience
+  </li>
+{% endmacro %}

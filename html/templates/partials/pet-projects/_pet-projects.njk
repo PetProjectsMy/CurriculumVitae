@@ -1,0 +1,7 @@
+{% block pet_projects %}
+  {% if language == language_ru %}
+    {% include "./pet-projects.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./pet-projects.en.njk" %}
+  {% endif %}
+{% endblock pet_projects %}

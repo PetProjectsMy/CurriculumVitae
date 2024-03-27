@@ -5,8 +5,10 @@
 %}
   {% set lines_decorated = [] %}
 
+  {% set last_given_prefixes = line_prefixes | last | default([]) %}
   {% for line in lines %}
-    {% set lines_decorated = lines_decorated.concat(line_prefixes) %}
+    {% set prefixes = line_prefixes[loop.index0] | default(last_given_prefixes) %}
+    {% set lines_decorated = lines_decorated.concat(prefixes) %}
     {% set _ = lines_decorated.push(line) %}
     {% if not loop.last and line not in ["\n", "\t"] %}
       {% set _ = lines_decorated.push("\n") %}

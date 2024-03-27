@@ -1,3 +1,6 @@
+{% extends "./with_preferences.njk" %}
+
+{% block content_with_preferences %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +18,7 @@
           media="print" />
   </head>
   <body>
-    <div class="cv-content-wrapper  {{ "theme-dark" if theme == "dark" else "theme-light" }}">
+    <div class="cv-content-wrapper  {{ "theme-dark" if theme == theme_dark else theme_light }}">
 
       {% block first_page %}
       {% endblock first_page %}
@@ -26,3 +29,4 @@
     </div>
   </body>
 </html>
+{% endblock content_with_preferences %}

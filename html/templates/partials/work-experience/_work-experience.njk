@@ -1,0 +1,7 @@
+{% block work_experience %}
+  {% if language == language_ru %}
+    {% include "./work-experience.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./work-experience.en.njk" %}
+  {% endif %}
+{% endblock work_experience %}

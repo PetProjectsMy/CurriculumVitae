@@ -1,0 +1,8 @@
+{% from "./header.macro.njk" import header with context %}
+
+{% block header_en %}
+  {{ header(
+    name = "Artur Isaev",
+    country = "Kazakhstan")
+  }}
+{% endblock header_en %}

@@ -1,0 +1,7 @@
+{% block about_me %}
+  {% if language == language_ru %}
+    {% include "./about-me.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./about-me.en.njk" %}
+  {% endif %}
+{% endblock about_me %}

@@ -1,13 +1,11 @@
 {% extends "layouts/cv.njk" %}
 
-{% set theme = "light" %}
-
 {% block first_page %}
   {% set page_number = 1 %}
-  {% include "first-page/page.njk" %}
+  {% include "pages/first-page.njk" %}
 {% endblock first_page %}
 
 {% block second_page %}
   {% set page_number = 2 %}
-  {% include "second-page/page.njk" %}
+  {% include "pages/second-page.njk" %}
 {% endblock second_page %}

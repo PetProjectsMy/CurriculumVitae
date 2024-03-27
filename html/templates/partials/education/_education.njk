@@ -1,0 +1,7 @@
+{% block education_info %}
+  {% if language == language_ru %}
+    {% include "./education.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./education.en.njk" %}
+  {% endif %}
+{% endblock education_info %}

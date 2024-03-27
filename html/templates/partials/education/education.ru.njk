@@ -1,0 +1,27 @@
+{% from "./education_place.macro.njk" import education_place with context %}
+
+{% block education_info_en %}
+  <section class="education-section">
+    <h3>Образование</h3>
+    <section class="main-education-section">
+      <h4>Основное</h4>
+      <ul class="main-education-list">
+        {{ macros.education_place(
+          date="2022, бакалавр",
+          organization="Московский Физико-Технический Институт",
+          specialization="компьютерное моделирование")
+        }}
+      </ul>
+    </section>
+    <section class="additional-education-section">
+      <ul class="additional-education-list">
+        <h4>Дополнительное</h4>
+        {{ macros.education_place(
+          date="2023",
+          organization="Яндекс Практикум",
+          specialization="Frontend Developer")
+        }}
+      </ul>
+    </section>
+  </section>
+{% endblock education_info_en %}

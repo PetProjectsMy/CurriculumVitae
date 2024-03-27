@@ -1,0 +1,7 @@
+{% block header %}
+  {% if language == language_ru %}
+    {% include "./header.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./header.en.njk" %}
+  {% endif %}
+{% endblock header %}

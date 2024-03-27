@@ -1,0 +1,7 @@
+{% block technical_skills %}
+  {% if language == language_ru %}
+    {% include "./skills.ru.njk" %}
+  {% elif language == language_en %}
+    {% include "./skills.en.njk" %}
+  {% endif %}
+{% endblock technical_skills %}

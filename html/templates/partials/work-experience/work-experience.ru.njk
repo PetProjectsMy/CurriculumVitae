@@ -1,0 +1,20 @@
+{% from "./workplace.macro.njk" import workplace with context %}
+
+{% block work_experience_ru %}
+  <section class="experience-section">
+    <h3 class="experience-section__header">Опыт работы</h3>
+    <div class="experience-section__main">
+      <ul class="work-places-list">
+        {{ workplace(
+          date="01/2022-09/2022",
+          organization="МониторСофт",
+          post="QA/тестировщик",
+          description=[
+            "В мои обязанности входило написание E2E тестов для веб-сервиса с применением selenium и pytest"
+          ]) 
+        }}
+      </ul>
+    </div>
+  </section>
+{% endblock work_experience_ru %}
+

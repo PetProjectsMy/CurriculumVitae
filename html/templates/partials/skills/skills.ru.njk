@@ -1,25 +1,21 @@
-{% macro skills_enumeration(title, skills) %}
-  <li class="technologies-stack-section__technologies-enumeration">
-    <span><em>{{ title }}:</em> {{ skills | join(", ") }}</span>
-  </li>
-{% endmacro %}
+{% from "./skills-enumeration.macro.njk" import skills_enumeration with context %}
 
-{% block technical_skills %}
+{% block technical_skills_ru %}
   <section class="technologies-stack-section">
     <h3 class="technologies-stack-section__title">Навыки</h3>
     <ul class="technologies-stack-section__technologies-list">
       {{ skills_enumeration(title="Языки",
             skills=["Javascript", "Typescript", "C#"]) }}
       {{ skills_enumeration(title="Фреймворки/библиотеки",
-            skills=["React", "Redux", "Redux Toolkit", "RTK Query"]) }}
+            skills=["React", "Redux Toolkit", "RTK Query"]) }}
       {{ skills_enumeration(title="Верстка",
-            skills=["HTML5", "CSS3", "Scss", "Less", "Postcss", "Handlebars", "Nunjucks"]) }}
+            skills=["Scss", "Postcss", "Tailwind", "Handlebars"]) }}
       {{ skills_enumeration(title="Сборщики",
             skills=["Webpack", "Vite", "Gulp"]) }}
       {{ skills_enumeration(title="Сервер",
-            skills=["Docker", "Nginx", "Express", "PostgreSQL", "Sequelize"]) }}
-      {{ skills_enumeration(title=" Code Linters",
+            skills=["Docker", "Nginx", "PostgreSQL", ".NET Core") }}
+      {{ skills_enumeration(title="Code Linters",
             skills=["Eslint", "Stylelint", "CSpell", "Lefthook"]) }}
     </ul>
   </section>
-{% endblock technical_skills %}
+{% endblock technical_skills_ru %}

@@ -1,0 +1,5 @@
+{% macro skills_enumeration(title, skills) %}
+  <li class="technologies-stack-section__technologies-enumeration">
+    <span><em>{{ title }}:</em> {{ skills | join(", ") }}</span>
+  </li>
+{% endmacro %}
